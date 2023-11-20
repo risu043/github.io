@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap');
+
+/*
+COLORS
+================================================ */
+:root {
+  --main-color: #d30839;
+  --base-color: #f3e2d5;
+  --white: #fff;
+  --font-color: #3d3333;
+  --font-japanese: 'Kiwi Maru', serif; /* light300 medium500 */
+}
+
+/*
+    GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%;
+}
+body {
+  background-color: var(--white);
+  color: var(--font-color);
+  font-family: var(--font-japanese);
+  width: 100vw;
+  height: 100vh;
+  background-size: 80px 80px;
+  background-repeat: repeat;
+  background-image: conic-gradient(
+    var(--base-color) 0deg 90deg,
+    rgba(255, 255, 255, 0) 90deg 180deg,
+    var(--base-color) 180deg 270deg,
+    rgba(255, 255, 255, 0) 270deg 360deg
+  );
+}
+
+/*
+    COMMON
+================================================ */
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+/* layout */
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  margin-inline: auto;
+  text-align: center;
+  background-color: var(--base-color);
+}
+.content {
+  padding: 10vh 1rem;
+}
+
+/*
+    MAIN
+================================================ */
+.image img {
+  height: 350px;
+  width: auto;
+}
+.box {
+  animation-name: omikuji_box;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes omikuji_box {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  @media (600px < width) {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+.wrapper p {
+  padding: 1rem 0;
+}
+.button {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  padding: 1rem 2rem;
+  border: 2px solid var(--main-color);
+  border-radius: 50px;
+  width: 100%;
+  max-width: 300px;
+  transition: 0.4s;
+}
+.button:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+}
