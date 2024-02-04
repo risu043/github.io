@@ -1,1 +1,1 @@
-「おみくじ」javascriptで作りました
+javascriptで作ったおみくじです
