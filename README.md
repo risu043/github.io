@@ -1,1 +1,1 @@
-# github.io
+「おみくじ」javascriptで作りました
